@@ -15,6 +15,15 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    public void contaCriada(){
+        String mensagem = String.format(
+                "Olá %s, obrigado por criar uma conta em nosso banco. Sua agência é %s, conta %d e seu saldo R$ %.2f já está disponível para saque.",
+                nomeCliente, agencia, numero, saldo
+        );
+
+        System.out.println(mensagem);
+    }
+
     public int getNumero() {
         return numero;
     }
@@ -45,5 +54,15 @@ public class Conta {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "numero=" + numero +
+                ", agencia='" + agencia + '\'' +
+                ", nomeCliente='" + nomeCliente + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 }
